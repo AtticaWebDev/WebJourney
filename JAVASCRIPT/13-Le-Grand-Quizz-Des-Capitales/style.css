@@ -1,0 +1,140 @@
+/* GOOGLE FONT     */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+/* RESET  */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  height: auto;
+  background: no-repeat center / cover;
+  background-color: #09090c;
+}
+
+h1 {
+  text-align: center;
+  margin: 3rem 0;
+  color: white;
+  text-transform: uppercase;
+}
+
+h1 span {
+  color: #9b9ccd;
+}
+
+.container {
+  width: 100%;
+  height: auto;
+}
+
+.quizz-form {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  pad: 1rem;
+  margin-bottom: 3rem;
+}
+
+.container-question {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.box-question {
+  width: 100%;
+  max-width: 300px;
+  margin: 1rem;
+  background: #111115;
+  padding: 2rem;
+  border-radius: 5px;
+  transition: background 0.5s ease-in-out;
+}
+
+.box-question:hover {
+  background: #1111157c;
+}
+
+.box-question h4 {
+  color: #9d9dcd;
+  margin-bottom: 1rem;
+}
+
+.box-question input {
+  cursor: pointer;
+}
+
+.box-question label {
+  display: inline-block;
+  font-weight: bold;
+  color: #efeff0;
+  margin-bottom: 0.5rem;
+}
+
+.resultat {
+  color: #5557d8;
+  background: #111115;
+  width: 100%;
+  max-width: 400px;
+  margin: 2rem auto;
+  padding: 1rem;
+  border-radius: 5px;
+}
+
+.cont-btn {
+  margin-top: 1rem;
+}
+
+button {
+  display: block;
+  padding: 1rem 2rem;
+  background: #2e3084;
+  color: #efeff0;
+  border: none;
+  border-radius: 5px;
+  margin: 0 auto;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.2s ease-in-out;
+}
+
+button:hover {
+  background: #2e2f84ab;
+}
+.resultat h2 {
+  color: #9b9ccd;
+  font-size: 15px;
+  text-align: center;
+  text-transform: lowercase;
+  margin: 1rem 0;
+}
+
+.info {
+  font-size: 20px;
+  color: red;
+}
+
+.score {
+  font-size: 25px;
+  font-weight: 400;
+  text-align: center;
+}
+
+.score span,
+.info {
+  display: block;
+  margin: 0.5rem 0;
+  font-size: 30px;
+  font-weight: 700;
+  text-align: center;
+}
