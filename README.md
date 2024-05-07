@@ -8,10 +8,8 @@ WebJourney est une vitrine de mes réalisations dans le domaine du développemen
 
 ## Contenu
 
-- [Projet 1](projets/projet1): Description courte du projet 1.
-- [Projet 2](projets/projet2): Description courte du projet 2.
-- [Projet 3](projets/projet3): Description courte du projet 3.
-- ...
+- HTML-CSS
+- Javascript
 
 ## Comment contribuer
 
