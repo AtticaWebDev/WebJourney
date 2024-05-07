@@ -8,4 +8,4 @@ Ce projet est un exemple de header que j'ai réalisé dans le cadre de mon parco
 
 - `index.html` : Le fichier HTML principal contenant la structure de la page.
 - `styles.css` : Le fichier CSS contenant les styles pour le site web.
-- `images/` : Le dossier contenant les images utilisées dans le site web.
+- `images/` : Le dossier contenant les images utilisées dans le site web..
