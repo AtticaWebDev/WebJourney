@@ -3,7 +3,7 @@ import Timeline from "./pages/Timeline";
 import SignUp from "./pages/SignUp";
 import { AuthProvider } from "./context/auth";
 import PublicRoute from "./routes/PublicRoute";
-import PrivateRoute from "./routes/PublicRoute";
+import PrivateRoute from "./routes/PrivateRoute";
 
 function App() {
   return (
