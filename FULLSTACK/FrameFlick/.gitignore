@@ -27,3 +27,7 @@ dist-ssr
 # Ignore .env file containing sensitive information
 .env
 
+
+/src/firebase/firebaseConfig.ts
+
+
