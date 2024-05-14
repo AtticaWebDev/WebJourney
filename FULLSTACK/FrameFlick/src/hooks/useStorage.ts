@@ -38,7 +38,7 @@ function useStorage(setUrl: ((arg0: string) => void) | undefined) {
           // Vérification si setUrl est défini
           setUrl(downloadURL); // Utiliser la fonction setUrl pour mettre à jour l'URL
         }
-        setProgress(100); // Mettre la progression à 100 une fois le téléchargement terminé
+        setProgress(progress);
         await addDoc(collection(db, "images"), {
           imageUrl: downloadURL,
           createAt: new Date(),
