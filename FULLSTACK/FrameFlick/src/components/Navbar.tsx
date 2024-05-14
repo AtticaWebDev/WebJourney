@@ -1,12 +1,22 @@
+import { signOut } from "firebase/auth";
 import FrameFlickLogo from "../assets/svg/logo.svg";
+import { auth } from "../firebase/config";
 
 function Navbar() {
+  const handleLogout = async () => {
+    try {
+      await signOut(auth);
+    } catch (error) {
+      console.log(error.message);
+    }
+  };
+
   return (
-    <div className="navbar bg-base-100 justify-between">
+    <div className="navbar justify-between">
       <a>
         <img src={FrameFlickLogo} width="10%" alt="FrameFlickLogo" />
       </a>
-      <button>Se déconnecter</button>
+      <button onClick={handleLogout}>Se déconnecter</button>
     </div>
   );
 }

@@ -1,6 +1,7 @@
 import { Route, Routes } from "react-router-dom";
 import Timeline from "./pages/Timeline";
 import SignUp from "./pages/SignUp";
+import Login from "./pages/Login"; // Ajout de l'import pour la page de connexion
 import { AuthProvider } from "./context/auth";
 import PublicRoute from "./routes/PublicRoute";
 import PrivateRoute from "./routes/PrivateRoute";
@@ -22,6 +23,14 @@ function App() {
           element={
             <PublicRoute>
               <SignUp />
+            </PublicRoute>
+          }
+        />
+        <Route // Nouvel itinéraire pour la page de connexion
+          path="/login"
+          element={
+            <PublicRoute>
+              <Login />
             </PublicRoute>
           }
         />

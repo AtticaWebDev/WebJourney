@@ -1,37 +1,39 @@
-import { createUserWithEmailAndPassword } from "firebase/auth";
 import { useState } from "react";
+import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../firebase/config";
 import { useNavigate, Link } from "react-router-dom";
 
-function SignUp() {
+function Login() {
   const navigate = useNavigate();
   const [email, setEmail] = useState<string>("");
   const [password, setPassword] = useState<string>("");
   const [error, setError] = useState<string>("");
-  // console.log({ email, password });
 
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-
+  const loginWithEmailAndPassword = async (email: string, password: string) => {
     try {
-      await createUserWithEmailAndPassword(auth, email, password);
-      navigate("/");
+      await signInWithEmailAndPassword(auth, email, password);
+      navigate("/"); // Redirigez l'utilisateur vers la page d'accueil après la connexion
     } catch (error) {
       setError(error.message);
     }
   };
 
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    await loginWithEmailAndPassword(email, password);
+  };
+
   return (
     <form data-theme="light" onSubmit={handleSubmit}>
-      {error && error}
+      {error && <div className="text-red-500">{error}</div>}
       <div className="hero min-h-screen bg-base-200">
         <div className="hero-content flex-col ">
           <div className="text-center ">
-            <h1 className="text-5xl font-bold">Inscris-toi gratuitement. ✌️</h1>
+            <h1 className="text-5xl font-bold">Connecte-toi. ✌️</h1>
             <p className="py-6">
-              Déjà inscrit·e sur{" "}
+              Tu n'as pas encore de compte sur{" "}
               <span className="font-extrabold">
-                <Link to="/login">Frame Flick ?</Link>
+                <Link to="/signup">Frame Flick ?</Link>
               </span>
             </p>
           </div>
@@ -65,7 +67,7 @@ function SignUp() {
                 />
               </div>
               <div className="form-control mt-6">
-                <button className="btn btn-primary">S'inscrire</button>
+                <button className="btn btn-primary">Se Connecter</button>
               </div>
             </div>
           </div>
@@ -75,4 +77,4 @@ function SignUp() {
   );
 }
 
-export default SignUp;
+export default Login;
