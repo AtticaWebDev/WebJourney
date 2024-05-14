@@ -15,7 +15,7 @@ function SignUp() {
 
     try {
       await createUserWithEmailAndPassword(auth, email, password);
-      navigate("/");
+      navigate("/timeline");
     } catch (error) {
       setError(error.message);
     }

@@ -12,7 +12,7 @@ function Login() {
   const loginWithEmailAndPassword = async (email: string, password: string) => {
     try {
       await signInWithEmailAndPassword(auth, email, password);
-      navigate("/"); // Redirigez l'utilisateur vers la page d'accueil après la connexion
+      navigate("/timeline"); // Redirigez l'utilisateur vers la page d'accueil après la connexion
     } catch (error) {
       setError(error.message);
     }

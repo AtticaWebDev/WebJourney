@@ -5,6 +5,7 @@ import Login from "./pages/Login"; // Ajout de l'import pour la page de connexio
 import { AuthProvider } from "./context/auth";
 import PublicRoute from "./routes/PublicRoute";
 import PrivateRoute from "./routes/PrivateRoute";
+import Home from "./pages/Home";
 
 function App() {
   return (
@@ -12,6 +13,14 @@ function App() {
       <Routes>
         <Route
           path="/"
+          element={
+            <PublicRoute>
+              <Home />
+            </PublicRoute>
+          }
+        />
+        <Route
+          path="/timeline"
           element={
             <PrivateRoute>
               <Timeline />
